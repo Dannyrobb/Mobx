@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "projects": {
+    "affiliate": "apps/affiliate",
+    "affiliate-e2e": "apps/affiliate-e2e",
+    "api-types": "libs/api-types",
+    "icons": "libs/icons",
+    "proxy-server": "apps/proxy-server",
+    "react-testing-utils": "libs/react-testing-utils",
+    "theme": "libs/theme",
+    "ui-lib": "libs/ui-lib",
+    "utils": "libs/utils",
+    "wrappers": "libs/wrappers"
+  }
+}

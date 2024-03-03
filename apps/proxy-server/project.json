@@ -1,0 +1,53 @@
+{
+  "root": "apps/proxy-server",
+  "sourceRoot": "apps/proxy-server/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/proxy-server",
+        "main": "apps/proxy-server/src/main.ts",
+        "tsConfig": "apps/proxy-server/tsconfig.app.json",
+        "assets": ["apps/proxy-server/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/proxy-server/src/environments/environment.ts",
+              "with": "apps/proxy-server/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "proxy-server:build",
+        "port": 5100
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/proxy-server/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/proxy-server"],
+      "options": {
+        "jestConfig": "apps/proxy-server/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

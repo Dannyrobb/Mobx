@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@cellxpert/api-types": ["libs/api-types/src/index.ts"],
+      "@cellxpert/icons": ["libs/icons/src/index.ts"],
+      "@cellxpert/react-testing-utils": ["libs/react-testing-utils/src/index.ts"],
+      "@cellxpert/theme": ["libs/theme/src/index.ts"],
+      "@cellxpert/ui-lib": ["libs/ui-lib/src/index.ts"],
+      "@cellxpert/utils": ["libs/utils/src/index.ts"],
+      "@cellxpert/wrappers": ["libs/wrappers/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

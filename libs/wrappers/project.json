@@ -1,0 +1,23 @@
+{
+  "root": "libs/wrappers",
+  "sourceRoot": "libs/wrappers/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/wrappers/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/wrappers"],
+      "options": {
+        "jestConfig": "libs/wrappers/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

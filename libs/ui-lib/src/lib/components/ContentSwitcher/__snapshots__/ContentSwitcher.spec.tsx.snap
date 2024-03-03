@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentSwitcher should be able to change tabs 1`] = `
+<button
+  class="css-4hccwr-Tab e1klf5xo1"
+>
+  <span
+    class="css-1lhcv4-TabLabel e1klf5xo0"
+  >
+    middle
+  </span>
+</button>
+`;
+
+exports[`ContentSwitcher should render successfully 1`] = `
+<body>
+  <div>
+    <div
+      class="css-161nnu1-TabGroup e1klf5xo2"
+    >
+      <button
+        class="css-dczsz7-Tab e1klf5xo1"
+      >
+        <span
+          class="css-1lhcv4-TabLabel e1klf5xo0"
+        >
+          left
+        </span>
+      </button>
+      <button
+        class="css-4hccwr-Tab e1klf5xo1"
+      >
+        <span
+          class="css-1lhcv4-TabLabel e1klf5xo0"
+        >
+          middle
+        </span>
+      </button>
+      <button
+        class="css-1xif5kq-Tab e1klf5xo1"
+      >
+        <span
+          class="css-1lhcv4-TabLabel e1klf5xo0"
+        >
+          right
+        </span>
+      </button>
+    </div>
+    <svg
+      class="css-9qkvca-SvgIconBase eb84nrk0"
+      fill="#126AEC"
+      height="16"
+      viewBox="0 0 32 32"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <rect
+        fill="none"
+        height="32"
+        id="verticalDivider"
+        width="32"
+      />
+      <rect
+        height="16"
+        transform="rotate('90')"
+        width="2"
+        x="8"
+        y="15"
+      />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`ContentSwitcher should show the first item as selected by default 1`] = `
+<button
+  class="css-dczsz7-Tab e1klf5xo1"
+>
+  <span
+    class="css-1lhcv4-TabLabel e1klf5xo0"
+  >
+    left
+  </span>
+</button>
+`;

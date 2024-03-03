@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label snould not have a label attribute 1`] = `
+<body>
+  <div>
+    <label
+      class="css-1l34zne-StyledLabel e18hlgk20"
+    >
+      Label
+    </label>
+  </div>
+</body>
+`;

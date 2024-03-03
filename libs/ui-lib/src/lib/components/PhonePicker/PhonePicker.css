@@ -1,0 +1,28 @@
+.react-tel-input .selected-flag {
+    width:72px;
+}
+
+.react-tel-input .selected-flag .arrow {
+    display: inline-block;
+    border-top: 0;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 0;
+    width: 6px; 
+    height: 6px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 0;
+    left: 23px;
+    margin-left: 10px;
+}
+
+.react-tel-input .selected-flag .arrow.up {
+    transform: rotate(-135deg);
+    top: 10%;
+    border-bottom: 1px solid black;
+}
+
+.react-tel-input .flag {
+    transform: scale(1.4, 1.3);
+}

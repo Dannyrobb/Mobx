@@ -1,0 +1,98 @@
+{
+  "root": "apps/affiliate",
+  "sourceRoot": "apps/affiliate/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/affiliate",
+        "index": "apps/affiliate/src/index.html",
+        "baseHref": "/",
+        "main": "apps/affiliate/src/main.tsx",
+        "polyfills": "apps/affiliate/src/polyfills.ts",
+        "tsConfig": "apps/affiliate/tsconfig.app.json",
+        "assets": ["apps/affiliate/src/favicon.ico", "apps/affiliate/src/assets"],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/affiliate/src/environments/environment.ts",
+              "with": "apps/affiliate/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "affiliate:build",
+        "hmr": true,
+        "port": 5200,
+        "proxyConfig": "apps/affiliate/proxy.conf.json"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "affiliate:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/affiliate/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/affiliate"],
+      "options": {
+        "jestConfig": "apps/affiliate/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "port": 4400,
+        "config": {
+          "configFolder": "apps/affiliate/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/react",
+        "outputPath": "dist/storybook/affiliate",
+        "config": {
+          "configFolder": "apps/affiliate/.storybook"
+        }
+      }
+    }
+  },
+  "tags": []
+}
